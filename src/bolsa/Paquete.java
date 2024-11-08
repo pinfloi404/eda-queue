@@ -2,11 +2,11 @@ package bolsa;
 
 public class Paquete {
     private String mes;
-    private int nAcciones, precio;
+    private int acciones, precio;
     
-    public Paquete(String mes, int nAcciones, int precio) {
+    public Paquete(String mes, int acciones, int precio) {
         this.mes = mes;
-        this.nAcciones = nAcciones;
+        this.acciones = acciones;
         this.precio = precio;
     }
 
@@ -14,36 +14,20 @@ public class Paquete {
         return mes;
     }
 
-    public void setMes(String mes) {
-        this.mes = mes;
+    public int getAcciones() {
+        return acciones;
     }
 
-    public int getnAcciones() {
-        return nAcciones;
-    }
-
-    public void setnAcciones(int nAcciones) {
-        this.nAcciones = nAcciones;
+    public void setAcciones(int acciones) {
+        this.acciones = acciones;
     }
 
     public int getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
-        this.precio = precio;
-    }
-
-    public void comprarAcciones(int acciones, int precio) {
-
-    }
-
-    public void venderAcciones(int acciones, int precio) {
-
-    }
-    
     @Override
     public String toString() {
-        return super.toString();
+        return "Mes de compra: " + mes + ", número de acciones: " + acciones + ", precio de compra " + precio + "€";
     }
 }
